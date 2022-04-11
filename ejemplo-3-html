@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>¡Guárdalo como HTML!</title>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250">
+            <g id="aqui"></g>
+        </svg>
+        <script>
+            var personajes = [
+                { nombre: "Marge", imagen: "https://raw.githubusercontent.com/profesorfaco/dno075-2022-1/main/clase-06/img/marge.svg" },
+                { nombre: "Homer", imagen: "https://raw.githubusercontent.com/profesorfaco/dno075-2022-1/main/clase-06/img/homer.svg" },
+                { nombre: "Bart", imagen: "https://raw.githubusercontent.com/profesorfaco/dno075-2022-1/main/clase-06/img/bart.svg" },
+                { nombre: "Lisa", imagen: "https://raw.githubusercontent.com/profesorfaco/dno075-2022-1/main/clase-06/img/lisa.svg" },
+                { nombre: "Maggie", imagen: "https://raw.githubusercontent.com/profesorfaco/dno075-2022-1/main/clase-06/img/maggie.svg" }
+            ];
+            personajes.forEach((p, n) => {
+                document.getElementById("aqui").innerHTML += '<image width="200" height="200" x="'+ n * 200+'" y ="10" href="'+p.imagen+'"></image><text width="200" height="50" x="'+ ((n * 200) + 100) +'" y ="240" text-anchor="middle" font-size="2em">'+ p.nombre +'</text>';
+            });
+        </script>
+    </body>
+</html>

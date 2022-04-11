@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>¡Guárdalo como HTML!</title>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+            <g id="aqui"></g>
+        </svg>
+        <script>
+            var retinal = ["size", "value", "texture", "color", "orientation", "shape"];
+            retinal.sort();
+            retinal.forEach(function (r, n) {
+                document.querySelector("#aqui").innerHTML += '<text x="50" y="' + 20 * (n + 1) + '">' + r + '</text>';
+            });
+        </script>
+    </body>
+</html>
